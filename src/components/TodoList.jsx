@@ -9,15 +9,15 @@ const TodoList = () => {
         if(!todo.text || /^\s*$/.test(todo.text)){
             return
         }
-        const newTodos = [todo, ...todos]
-        setTodos(newTodos)
-        console.log(...todos)
+        const newTodos = [todo, ...todos];
+
+        setTodos(newTodos);
     }
 
   return (
     <div>
       <h1>Whats the plan for to the day</h1>
-      <TodoForm/>
+      <TodoForm onSubmit={addTodo} />
     </div>
   )
 }
